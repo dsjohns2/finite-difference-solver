@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+.././src/matrix.h
+
+.././src/tri_diag_solver.h
+matrix.h
+-
+
+/home/dansj/finite-difference-solver/src/matrix.cpp
+matrix.h
+-
+assert.h
+-
+iostream
+-
+fstream
+-
+string
+-
+
+/home/dansj/finite-difference-solver/src/tri_diag_solver.cpp
+tri_diag_solver.h
+-
+matrix.h
+-
+math.h
+-
+iostream
+-
+
+/home/dansj/finite-difference-solver/tests/test_tri_diag_solver.cpp
+tri_diag_solver.h
+-
+iostream
+-
+matrix.h
+-
+

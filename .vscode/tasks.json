@@ -1,0 +1,15 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build",
+			"type": "shell",
+			"command": "mkdir -p build && cd build && cmake .. && make"
+		},
+		{
+			"label": "plot",
+			"type": "shell",
+			"command": "cd tests && python plot.py"
+		}
+	]
+}

@@ -11,6 +11,11 @@ HeatPDE::HeatPDE(float h, int N, Matrix* data){
     this->solver = new TriDiagSolver();
 };
 
+HeatPDE::~HeatPDE(){
+    delete this->solver;
+    delete this->stencil;
+}
+
 Matrix* HeatPDE::generate_stencil(){
     Matrix* stencil = new Matrix(this->N + 1, this->N + 1);
     stencil->set(0, 0, 1);

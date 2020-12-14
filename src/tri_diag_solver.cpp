@@ -14,6 +14,11 @@ Matrix* TriDiagSolver::solve(Matrix* A, Matrix* b){
     Matrix* y = Q->MatMul(b);
     //Backward substitution    
     Matrix* x = this->back_sub(T, y);
+
+    delete Q;
+    delete T;
+    delete y;
+
     return x;
 }
 
@@ -31,6 +36,8 @@ void TriDiagSolver::givens(Matrix* T, Matrix* Q, int j){
     T->set_matrix(new_T);
     Matrix* new_Q = givens_matrix.MatMul(Q);
     Q->set_matrix(new_Q);
+    delete new_T;
+    delete new_Q;
 }
 
 Matrix* TriDiagSolver::back_sub(Matrix* A, Matrix* b){

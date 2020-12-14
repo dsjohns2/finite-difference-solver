@@ -1,6 +1,7 @@
 #include <matrix.h>
 #include <assert.h>
 #include <iostream>
+#include <fstream>
 #include <string>
 
 Matrix::Matrix(int m, int n){
@@ -16,6 +17,10 @@ Matrix::Matrix(const Matrix& other){
     for(int i=0; i<m*n; i++){
         this->arr[i] = other.arr[i];
     }
+}
+
+Matrix::~Matrix(){
+    delete [] this->arr;
 }
 
 Matrix* Matrix::MatMul(Matrix* other){
@@ -54,6 +59,19 @@ void Matrix::print(){
         std::cout << std::endl;
     }
     std::cout << std::endl;
+}
+
+void Matrix::save(char* filename){
+    std::ofstream out_file;
+    out_file.open(filename);
+    for(int i=0; i<this->m; i++){
+        for(int j=0; j<this->n; j++){
+            out_file << std::to_string(this->get(i, j)) << " ";
+        }
+        out_file << std::endl;
+    }
+    out_file << std::endl;
+    out_file.close();
 }
 
 void Matrix::identity(){

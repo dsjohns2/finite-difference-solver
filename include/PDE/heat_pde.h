@@ -6,6 +6,7 @@
 class HeatPDE{
     public:
         HeatPDE(float h, int N, Matrix* data);
+        ~HeatPDE();
         int N;
         float h;
         Matrix* stencil;
