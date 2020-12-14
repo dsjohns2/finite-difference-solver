@@ -1,5 +1,0 @@
-/home/dansj/finite-difference-solver/build/CMakeFiles/edit_cache.dir
-/home/dansj/finite-difference-solver/build/CMakeFiles/test_heat_pde.dir
-/home/dansj/finite-difference-solver/build/CMakeFiles/rebuild_cache.dir
-/home/dansj/finite-difference-solver/build/CMakeFiles/test_matrix.dir
-/home/dansj/finite-difference-solver/build/CMakeFiles/test_tri_diag_solver.dir

@@ -1,1 +1,0 @@
-/usr/bin/c++  -g  -rdynamic CMakeFiles/test_heat_pde.dir/tests/test_heat_pde.cpp.o CMakeFiles/test_heat_pde.dir/src/heat_pde.cpp.o CMakeFiles/test_heat_pde.dir/src/matrix.cpp.o CMakeFiles/test_heat_pde.dir/src/tri_diag_solver.cpp.o  -o test_heat_pde 
