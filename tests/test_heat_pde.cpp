@@ -3,8 +3,8 @@
 #include <math.h>
 
 int main(int argc, char** argv){
-    float h = .1;
-    int N = 10;
+    int N = 200;
+    float h = 1/((float) N);
     float left_boundary_condition = 1;
     float right_boundary_condition = 1;
     Matrix* grid = new Matrix(N+1, 1);
